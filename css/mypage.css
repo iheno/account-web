@@ -1,0 +1,220 @@
+.mypage__container {
+  margin: 0 auto;
+  padding: 50px 0 102px;
+  position: relative;
+  max-width: 1080px;
+  width: 100%;
+}
+.mypage__container .addCardBtn {
+  position: absolute;
+  right: 0;
+  top: auto;
+}
+.mypage__container .addCardBtn a {
+  background-color: rgb(74, 144, 226);
+  color: #ffffff !important;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  padding: 0;
+  text-align: center;
+  width: 120px;
+}
+.mypage__container .HeadingTitle {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 17px;
+  height: 36px;
+  line-height: 36px;
+}
+.mypage__side {
+  color: #333333;
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  width: 300px;
+}
+.mypage__side__menu {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgb(227, 227, 227);
+  margin-bottom: 10px;
+}
+.mypage__side__menu a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  border-left: 1px solid rgb(227, 227, 227);
+  border-right: 1px solid rgb(227, 227, 227);
+}
+.mypage__side__menu a:nth-of-type(n+1) {
+  border-top: 1px solid rgb(227, 227, 227);
+}
+.mypage__side__menu .mypage__side__item {
+  height: 100%;
+  padding: 0 36px;
+  font-size: 15px;
+  color: rgba(51, 51, 51, 0.3);
+}
+.mypage__side__menu .active .mypage__side__item {
+  border-left: 4px solid rgb(233, 30, 99);
+  color: #333333;
+  font-weight: bold;
+  padding: 0 30px;
+}
+.mypage__side__item .profile__ico {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-right: 10px;
+  opacity: 0.3;
+}
+.mypage__side__item:hover {
+  color: #333333;
+}
+.mypage__side__item:hover .profile__ico {
+  opacity: 1;
+}
+.active .mypage__side__item .profile__ico {
+  opacity: 1;
+}
+.mypage__side__item .ico_credit {
+  background-image: url(../img/credit_ico.svg);
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+}
+.mypage__side__item .ico_service {
+  background-image: url(../img/service_ico.svg);
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+}
+.mypage__body {
+  display: inline-block;
+  width: 760px;
+}
+.mypage__box {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 rgb(227, 227, 227);
+  margin-bottom: 8px;
+}
+.mypage__empty__container {
+  height: 530px;
+  position: relative;
+  width: 100%;
+}
+.mypage__empty__wrapper {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.mypage__empty__txt {
+  color: rgba(51, 51, 51, 0.3);
+  font-size: 14px;
+  margin-top: 20px;
+}
+.mypage__empty__img img{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+@media screen and (max-width: 1023px) {
+  .mypage__container {
+    margin: 0 79px;
+    padding-bottom: 40px;
+    padding-top: 56px;
+    position: relative;
+    width: auto;
+  }
+  .mypage__side {
+    float: none;
+    margin: 0;
+    margin-top: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(227, 227, 227, 0.5);
+  }
+  .mypage__side__menu {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .mypage__side__menu a {
+    width: auto;
+    height: 42px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 25px;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .mypage__side__menu a:first-child {
+    padding-left: 16px;
+  }
+  .mypage__side__menu a:nth-of-type(n+1) {
+    border-top: none!important;
+  }
+  .mypage__side__menu .mypage__side__item {
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    line-height: 42px;
+  }
+  .mypage__side__menu .active .mypage__side__item {
+    border-left: 0;
+    padding: 0;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(233, 30, 99);
+    text-align: center;
+  }
+  .mypage__body {
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .mypage__container {
+    margin: 0;
+    padding-top: 25px;
+  }
+  .mypage__container .addCardBtn {
+    right: 16px;
+  }
+  .mypage__container .HeadingTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-left: 25px;
+  }
+  .mypage__body {
+    margin: 0;
+    width: 100%;
+  }
+  .mypage__empty__container {
+    height: 333px;
+  }
+}

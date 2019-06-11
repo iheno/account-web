@@ -1,5 +1,4 @@
-# ProfilePopUp
-Account Profile Popup
+# account-web-design
+アカウントウェブのデザイン(アントンさんとの協力用)
 
-
-![Account Profile Popup](https://iheno.github.io/ProfilePopUp/img/porfilepop.png "Account Profile Popup")
+![account-web-design](https://wamazing.github.io/account-web-design/sample.png "account-web-design")

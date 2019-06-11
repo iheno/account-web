@@ -1,0 +1,341 @@
+
+.creditWarp {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.credit__box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(221, 221, 221, 0.5) 0px 0px 1px 0px;
+  padding: 50px 20px;
+}
+
+@media (min-width: 481px) {
+.credit__box {
+  max-width: 720px;
+  margin: 20px 0;
+  padding: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(227, 227, 227);
+  border-image: initial;
+  border-radius: 2px;
+  }
+}
+
+.credit__title h3{
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+.credit__title p {
+  font-size: 10px;
+  padding: 15px 0 0 0;
+  color: #666d75;
+}
+.credit__title ul {
+  padding: 10px 0;
+}
+.credit__title ul li {
+  float: left;
+  list-style: none;
+  margin-right: 3px;
+}
+.credit__title ul li img {
+  width: 38px;
+  height: 26px;
+  object-fit: contain;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+.credit__cc__title {
+  display: inline-block;
+}
+.credit__cc__title h3{
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  float: left;
+}
+.credit_cc__state {
+  float: right;
+}
+.credit_cc__state li {
+  border: 1px solid rgb(227, 227, 227);
+  padding: 5px 20px;
+  background: rgba(227, 227, 227, 0.5);
+  font-size: 12px;
+  border-radius: 2px;
+}
+.credit_cc__state li i.check-ico {
+  background-image: url(../img/check-ico.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  background-position: center left;
+}
+.credit_cc__btn {
+  float: right;
+}
+.credit_cc__btn li {
+  float: left;
+}
+.credit_cc__btn li:last-child {
+  margin-left: 5px;
+}
+.credit_cc__btn li a {
+  color: #333333;
+  border: 1px solid rgb(227, 227, 227);
+  padding: 5px 20px;
+  background: rgba(255, 255, 255, 1);
+  font-size: 12px;
+  border-radius: 2px;
+}
+.credit_cc__btn li a:hover {
+  background: rgba(227, 227, 227, 0.5);
+}
+.credit_cc__btn li a.btn-use {
+  border: 1px solid rgb(74, 144, 226);
+  color: rgb(74, 144, 226);
+}
+.credit_cc__btn li a.btn-del {
+  border: 1px solid rgb(233, 30, 99);
+  color: rgb(233, 30, 99);
+}
+
+.boxLinner {
+  height: 1px;
+  background-color: rgb(227, 227, 227);
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px;
+  margin: 30px 0px 14px;
+}
+
+.credit__form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+.credit__select, .credit__cvv {
+  padding-top: 16px;
+  padding-top: 16px;
+}
+
+.credit__form__label {
+  height: 18px;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+}
+.credit__form__input {
+  height: 38px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(221, 221, 221, 0.5) 0px 0px 2px 0px;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(227, 227, 227);
+  border-image: initial;
+}
+
+.credit__form__input:focus {
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(233, 30, 99, 0.3);
+  border-image: initial;
+}
+
+.credit__form__input::placeholder {
+  color: rgb(202, 202, 202);
+  font-size: 13px;
+}
+
+.credit__select {
+  float: left;
+}
+.credit__cvv {
+  float: right;
+}
+.credit__info {
+  margin-top: 8px;
+}
+.credit__info li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin-right: 5px;
+}
+.credit__info li:last-child {
+  margin-right: 0;
+}
+.credit__form__select {
+  height: 42px;
+  display: block;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(221, 221, 221, 0.5) 0px 0px 2px 0px;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(227, 227, 227);
+  background-color: #ffffff;
+  background: url(../img/select-arrow.png) no-repeat;
+  background-size: 10px 16px;
+  padding: 0 12px 0 12px;
+}
+.credit__form__select:focus{
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(233, 30, 99, 0.3);
+  border-image: initial;
+}
+.dateSelectMon {
+  width: 60px;
+  background-position: 42px center;
+}
+.dateSelectYear {
+  width: 80px;
+  background-position: 62px center;
+}
+.dateCvv {
+  width: 108px;
+  overflow: hidden;
+  background: url(../img/cvv.svg) no-repeat;
+  background-size: 40px 25px;
+  background-position: 82px center;
+}
+.credit__btn {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.credit__btn .creditBtn {
+  width: 100%;
+  max-width: 320px;
+  height: 48px;
+  box-shadow: rgba(221, 221, 221, 0.5) 0px 0px 2px 0px;
+  background-color: rgb(233, 30, 99);
+  border-radius: 2px;
+}
+.credit__btn .creditBtn span {
+  height: 24px;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+
+.credit-card-warp li {
+  border-bottom: 1px dashed #ccc;
+}
+.cc,
+.cc-back {
+  background: linear-gradient(to left, #f8f8f8f8, #ffffff);
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: block;
+  height: 200px;
+  letter-spacing: .1rem;
+  margin: 20px auto 0;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  max-width: 350px;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chip {
+  background: #efb77f;
+  border-radius: 5px;
+  display: block;
+  height: 30px;
+  left: 30px;
+  position: absolute;
+  top: 50px;
+  width: 40px;
+}
+
+.card-logo i {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  width: 38px;
+  height: 26px;
+  object-fit: contain;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.card-logo.visa i {
+  background-image: url(../img/visa.svg);
+  background-size: 80%;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.card-logo.master i {
+  background-image: url(../img/mastercard.svg);
+  background-size: 80%;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.cc-number {
+  background: linear-gradient(#eee, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 75px;
+  font-size: 20px;
+  left: 30px;
+  position: absolute;
+}
+
+.cc-date {
+  background: linear-gradient(#eee, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 25px;
+  right: 30px;
+  position: absolute;
+}
+
+.cc-date.expiry {
+  right: 25px;
+}
+.cc-date.expiry:after {
+  -webkit-text-fill-color: #333333;
+  content: 'Valid thru';
+  font-size: 8px;
+  right: 0px;
+  position: absolute;
+  text-transform: none;
+  top: -10px;
+}

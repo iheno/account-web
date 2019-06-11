@@ -1,61 +1,74 @@
-
-/* ======= Header ======= */
-.header {
-  padding: 7px 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 0.5s;
-  z-index: 999;
-  background: #fff;
-  box-shadow: -1px 1px 4px 0px rgba(221, 221, 221, 0.5);
-}
-.header .logo h1 {
-  font-size: 34px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-.header .logo img {
-  padding: 0;
-  margin: 0;
-  width: 100px;
-  height: 20px;
-}
-@media (max-width: 673px) {
-  .logo {
-    margin-left: 20px;
-    }
-  }
-@media (max-width: 768px) {
-  .header .logo h1 {
-    font-size: 28px;
-    }
-  .header .logo img {
-    max-height: 40px;
-    }
-  }
-
-
- /* ======= loginArea ======= */ 
-.loginArea {
-  padding-right: 20px;
+.headerWarp {
   position: relative;
+  /* if fixed => position: fixed;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: 48px;
+  box-shadow: rgba(221, 221, 221, 0.5) 0px 2px 4px 0px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
 }
-.loginArea ul li {
+.header__inner {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1140px;
+  flex: 1 1 0%;
+  padding: 0px 20px;
+}
+.header__inner img.header__logo {
+  height: 20px;
+  margin-top: 14px;
+}
+.header__inner ul.loginArea {
+  float: right;
+  height: 48px;
+  line-height: 48px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.header__inner ul.loginArea li {
+  list-style: none;
   float: left;
-  height: 46px;
+  font-size: 13px;
 }
-.loginArea ul li a {
-  cursor: pointer;
+.header__inner ul.loginArea li a {
+  color: #333333;
+  text-decoration: none;
 }
-.loginArea ul li a:hover {
-  transition: background-color .15s ease;
+.header__inner ul.loginArea li.signIn{
+  height: 36px;
+  line-height: 36px;
 }
-.loginArea ul li.circle-profile a {
+.header__inner ul.loginArea li.signIn a {
+  padding: 8px 24px;
+  margin-right: 10px;
+}
+.header__inner ul.loginArea li.signIn a:hover {
+  background-color: #fafafa;
+}
+.header__inner ul.loginArea li.signUp{
+  height: 36px;
+  line-height: 36px;
+}
+.header__inner ul li.signUp a {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 7px 20px;
+  color: #333333;
+}
+.header__inner ul.loginArea li.signUp a:hover {
+  background-color: #fafafa;
+  border: 1px solid rgb(238, 238, 238);
+}
+.header__inner ul.loginArea li.circle-profile a {
   display: block;
   overflow: hidden;
   background-image: url(../img/profile_before_ico.png);
@@ -64,33 +77,6 @@
   background-size: 100%;
   cursor: pointer;
 }
-.loginArea ul li.signUp, .loginArea ul li.signIn {
-  height: 36px;
-  line-height: 36px;
-  font-size: 14px;
-}
-.loginArea ul li.signUp a {
-  border: 1px solid rgb(238, 238, 238);
-  padding: 7px 20px;
-  color: #333333;
-}
-
-.loginArea ul li.signUp a:hover {
-  background-color: #fafafa;
-  border: 1px solid rgb(238, 238, 238);
-}
-
-.loginArea ul li.signIn a {
-  padding: 8px 24px;
-  color: #333333;
-  margin-right: 10px;
-}
-
-.loginArea ul li.signIn a:hover {
-  background-color: #fafafa;
-}
-
-
 
 .profilePop {
   width: 220px;
@@ -109,7 +95,6 @@
   transform-origin: top right;
   transition: visibility .15s ease,opacity .15s ease,transform .15s ease;
 }
-
 .profilePop__arrow:after, .profilePop__arrow:before {
   border-style: solid;
   content: "";
@@ -119,43 +104,48 @@
   top: 0;
   width: 0;
 }
-
 .profilePop__arrow:before {
   border-color: rgba(0,0,0,0) rgba(0,0,0,0) #e0e0e0;
   border-width: 6px;
   right: 22.5px;
   top: -13px;
 }
-
 .profilePop__arrow:after {
   border-color: rgba(0,0,0,0) rgba(0,0,0,0) #ffffff;
   border-width: 6px;
   right: 22px;
   top: -12px;
 }
-
-.profilePop__section__middle {
-  display: inline-block;
-  padding: 0;
-  clear: both;
-}
-
-.profilePop__section__last {
-  border-top: 1px solid rgb(238, 238, 238);
-  clear: both;
-}
 .profilePop__section__wide {
   border-bottom: 1px solid rgb(238, 238, 238);
   padding: 20px 16px;
   height: auto;
+  display: block;
   clear: both;
-  display: inline-block;
+  overflow: hidden;
+}
+.profilePop__section__middle {
+  display: block;
+  padding: 0;
+  clear: both;
+  overflow: hidden;
+}
+.profilePop__section__sub {
+  display: block;
+  padding: 0;
+  clear: both;
+  overflow: hidden;
+}
+.profilePop__section__last {
+  border-top: 1px solid rgb(238, 238, 238);
+  clear: both;
+  display: block;
+  overflow: hidden;
 }
 
 .profileArea {
   float: left;
 }
-
 .profileArea i {
   display: block;
   overflow: hidden;
@@ -164,13 +154,29 @@
   height: 36px;
   background-size: 100%;
 }
-
 .profileArea__detail {
-  float: right;
+  float: left;
   margin-left: 20px;
 }
-
 .profileArea__detail .userIdNumber {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(179, 179, 179);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+  font-style: normal;
+}
+.profileArea__detail .userIdNumber span {
+  padding-left: 2px;
+  font-weight: 600;
+  color: #545454;
+}
+.profileArea__detail .userMail {
   display: block;
   margin: 0;
   padding: 0;
@@ -180,34 +186,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 140px;
-  font-style: normal;
-}
-
-.profileArea__detail .userIdNumber span {
-  padding-left: 2px;
-  font-weight: 600;
-  color: #545454;
-}
-
-.profileArea__detail .userMail {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  font-weight: 400;
-  color: rgb(179, 179, 179);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 130px;
   font-style: normal;
 }
-
 .profileArea__detail .userLink{
   display: none;
 }
-
 .profileArea__detail .userLink a{
   margin: 0;
   padding: 0;
@@ -217,11 +201,9 @@
   color: #4A90E2;
   transition: color .2s ease;
 }
-
 .profileArea__detail .userLink a:hover {
   color: #3272BC;
 }
-
 .profilePop__list {
   width: 100%;
   height: 48px;
@@ -234,39 +216,32 @@
   -ms-flex-align: center;
   align-items: center;
 }
-
 .profilePop__list:hover {
   background: #f8f8f8;
 }
-
 .profilePop__list a {
   color: #333333;
   font-size: 14px;
   width: 100%;
-  display: inline-block;
 }
-
 .profilePop__list .profile__ico {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
   margin-right: 16px;
 }
-
-.profilePop__list .ico_ticket {
-  background-image: url(../img/ticket_ico.svg);
+.profilePop__list .ico_credit {
+  background-image: url(../img/credit_ico.svg);
   width: 18px;
   height: 18px;
   background-size: 100%;
 }
-
-.profilePop__list .ico_help {
-  background-image: url(../img/help_ico.svg);
+.profilePop__list .ico_service {
+  background-image: url(../img/service_ico.svg);
   width: 18px;
   height: 18px;
   background-size: 100%;
 }
-
 .profilePop__list .profile__count {
   float: right;
   font-size: 12px;
@@ -278,7 +253,6 @@
   background: #E91E63;
   color: #ffffff;
 }
-
 .profilePop__logout {
   font-size: 12px;
 }
