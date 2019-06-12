@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="zh-cmn-Hant-TW">
 
 <head>
 	<meta charset="utf-8">
@@ -16,75 +16,119 @@
 	<meta property="og:site_name" content="" />
 	<meta property="og:description" content="" />
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/set.css">
-	<link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mypage.css">
+  <link rel="stylesheet" href="css/credit.css">
 
 </head>
 
 <body>
-	<header class="header">
-		<div class="container">
-			<div class="row align-items-center justify-content-between d-flex">
-				<div class="logo">
-					<a href="index.html">
-						<img src="img/logo.png" alt="" title="" />
-					</a>
-				</div>
-				<div class="loginArea">
-					<ul>
-						<li class="circle-profile">
-							<a href="#"></a>
-						</li>
-					</ul>
+  
+  <header class="headerWarp">
+    <div class="header__inner">
+      <a href="#"><img src="img/logo_wamazing.svg" class="header__logo" alt="" /></a>
+      <ul class="loginArea">
+        <li class="circle-profile"><a href="#"></a></li>
+      </ul>
+    </div>
+  </header>
 
-					<div class="profilePop">
-						<span class="profilePop__arrow"></span>
-						<div class="profilePop__warp">
-							<div class="profilePop__section__wide">
-								<div class="profileArea">
-									<i></i>
-								</div>
-								<div class="profileArea__detail">
-									<p class="userIdNumber"><span>Rodel</span></p>
-									<p class="userMail">iheno.github.io</p>
-									<p class="userLink"><a href="#">Account</a></p>
-								</div>
-							</div>
-							<ul class="profilePop__section__middle">
-								<li class="profilePop__list">
-									<a href="#">
-										<i class="profile__ico ico_ticket"></i>My Service<span class="profile__count">1</span>
-									</a>
-								</li>
-								<li class="profilePop__list">
-									<a href="#">
-										<i class="profile__ico ico_help"></i>Help<span></span>
-									</a>
-								</li>
-							</ul>
-							<ul class="profilePop__section__last">
-								<li class="profilePop__list">
-									<a href="#" class="profilePop__logout">
-										Logout
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+  <div class="mypage__container">
+    <div class="addCardBtn"><a href="#">Add Card</a></div>
+    <div class="HeadingTitle">My Page</div>
+    <div class="mypage__side">
+      <div class="mypage__side__menu">
+        <a href="#" class="active">
+          <div class="mypage__side__item">
+            <i class="profile__ico ico_credit"></i>My credit card
+          </div>
+        </a>
+        <a href="#">
+          <div class="mypage__side__item">
+            <i class="profile__ico ico_service"></i>WAmazing Services
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="mypage__body">
+      <div class="mypage__box clearfix">
+        <div class="creditWarp">
+          <div class="credit__box">
+            <div class="credit__title">
+              <h3>信用卡</h3>
+              <p>可以利用的信用卡品牌</p>
+              <ul>
+                <li><img src="img/visa.svg" alt="visa" /></li>
+                <li><img src="img/mastercard.svg" alt="mastercard" /></li>
+              </ul>
+            </div>
+            <hr class="boxLinner">
+            <form>
+              <div class="credit__form">
+                <label class="credit__form__label">信用卡號碼</label>
+                <input class="credit__form__input" placeholder="**** **** **** ****" type="tel" maxlength="19" autocomplete="cc-number">
+              </div>
+              <div class="credit__form">
+                <label class="credit__form__label">持卡人</label>
+                <input class="credit__form__input" placeholder="姓名（英文）" autocomplete="cc-name">
+              </div>
+              <div class="credit__select">
+                <label class="credit__form__label">有效日期</label>
+                <ul class="credit__info">
+                  <li>
+                    <select class="credit__form__select dateSelectMon" title="月">
+                      <option value="">月</option>
+                      <option value="0">01</option>
+                      <option value="1">02</option>
+                      <option value="2">03</option>
+                      <option value="3">04</option>
+                      <option value="4">05</option>
+                      <option value="5">06</option>
+                      <option value="6">07</option>
+                      <option value="7">08</option>
+                      <option value="8">09</option>
+                      <option value="9">10</option>
+                      <option value="10">11</option>
+                      <option value="11">12</option>
+                    </select>
+                  </li>
+                  <li>
+                    <select class="credit__form__select dateSelectYear" title="年">
+                      <option value="">年</option>
+                      <option value="0">2019</option>
+                      <option value="1">2020</option>
+                      <option value="2">2021</option>
+                      <option value="3">2022</option>
+                      <option value="4">2023</option>
+                      <option value="5">2024</option>
+                      <option value="6">2025</option>
+                      <option value="7">2026</option>
+                      <option value="8">2027</option>
+                      <option value="9">2028</option>
+                      <option value="10">2029</option>
+                      <option value="11">2030</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+              <div class="credit__cvv">
+                <label class="credit__form__label">CVV / CVC</label>
+                <div class="credit__info">
+                  <input class="credit__form__input dateCvv" placeholder="CVV" type="number" maxlength="4">
+                </div>
+              </div>
+            </form>
+            <div class="credit__btn">
+              <button type="submit" class="creditBtn"><span>註冊</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- #header -->
 
-	
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
